@@ -38,6 +38,16 @@ url('https://drive.google.com/uc?export=view&id=153Z0pSSXrMQNWmZJtdQXMXcTnbcU3tY
     <h1>What is your name?</h1>
     <input type="text" id="name" placeholder="Enter your name"/>
     <button onclick="button_click()">click me!</button>
-    </div>
+  </div>
+  <script type="text/javascript">
+     function button_click() { 
+        let name = document.querySelector('#name').value;
+        let result =confirm("i like "+name+",Do you like me?");
+        while(result !== true){
+            result=confirm("i like" +name+ ",Do you like me?");
+        }
+        document.body.className="bg-heart";
+     }
+  </script>
 </body>
 </html>
